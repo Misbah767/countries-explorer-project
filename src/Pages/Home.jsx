@@ -1,6 +1,7 @@
 import React from "react";
-import CountryList from "../components/CountryList/CountryList";
-import Shimmer from "../components/Shimmer/Shimmer";
+import CountryList from "../Components/CountryList/CountryList";
+import Shimmer from "../Components/Shimmer/Shimmer";
+
 import { useCountriesContext } from "../Context/CountriesContext";
 
 function Home() {
