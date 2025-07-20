@@ -1,15 +1,12 @@
-/* ==============================
-   HEADER STYLES
-============================== */
+/* ========== Header Styles ========== */
 .header-container {
   width: 100%;
-  background-color: var(--header-bg, hsl(0, 0%, 100%));
+  background-color: hsl(0, 0%, 100%);
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
-  padding: 20px 90px;
+  padding: 16px 0;
   min-height: 50px;
   position: relative;
   z-index: 10;
-  transition: background-color 0.3s ease;
 }
 
 .container-inner {
@@ -24,16 +21,15 @@
 .header-title {
   font-weight: 700;
   font-size: clamp(16px, 2.5vw, 20px);
-  color: var(--text-primary, hsl(200, 15%, 8%));
+  color: hsl(200, 15%, 8%);
+  transition: color 0.3s ease;
   white-space: nowrap;
+  margin-top: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.3s ease;
 }
 
-/* ==============================
-   RESPONSIVE DESIGN
-============================== */
+/* ========== Responsive Design ========== */
 @media (max-width: 768px) {
   .container-inner {
     padding: 0 16px;
@@ -59,6 +55,7 @@
   }
 
   .header-title {
+    margin-bottom: 10px;
     font-size: clamp(13px, 5vw, 16px);
   }
 
@@ -71,17 +68,24 @@
   }
 }
 
-/* ==============================
-   DARK MODE
-============================== */
+/* DArk Mode */
 body.dark-mode {
-  --header-bg: hsl(209, 23%, 22%);
-  --text-primary: hsl(0, 0%, 100%);
   background-color: hsl(207, 26%, 17%);
-  color: var(--text-primary);
+  color: hsl(0, 0%, 100%);
+}
+
+
+body.dark-mode .header-container {
+  background-color: hsl(209, 23%, 22%);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .header-title {
+  color: hsl(0, 0%, 100%);
+  transition: color 0.3s ease;
 }
 
 body.dark-mode .theme-toggle {
-  color: var(--text-primary);
+  color: hsl(0, 0%, 100%);
   transition: color 0.3s ease;
 }

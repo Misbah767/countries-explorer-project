@@ -1,6 +1,6 @@
-/* ==============================
-   SHIMMER LOADER
-============================== */
+/* ==========================================
+   SHIMMER LOADER - Professional Style
+========================================== */
 .shimmer-container {
   display: flex;
   flex-wrap: wrap;
@@ -13,20 +13,14 @@
 
 .shimmer-card {
   height: 270px;
-
-
   flex: 1 1 290px;
   max-width: 230px;
-
   border-radius: 10px;
-  background-color: var(--card-bg, hsl(0, 0%, 100%));
-  border-radius: 10px;
-  border-radius: 10px;
-  background: var(--shimmer-bg, #e6e6e6);
+  background-color: var(--shimmer-bg, #dfdfdf);
   position: relative;
   overflow: hidden;
   margin: 20px;
-  box-shadow: var(--shimmer-shadow, 0 6px 20px rgba(0, 0, 0, 0.1));
+  box-shadow: var(--shimmer-shadow, 0 4px 16px rgba(0, 0, 0, 0.08));
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -34,54 +28,54 @@
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(110deg,
-      rgba(255, 255, 255, 0.1) 25%,
-      rgba(255, 255, 255, 0.4) 50%,
-      rgba(255, 255, 255, 0.1) 75%);
-  background-size: 250% 100%;
-  animation: shimmer 1.6s ease-in-out infinite;
+  background: linear-gradient(100deg,
+      rgba(255, 255, 255, 0.04) 25%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.04) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
 }
 
 @keyframes shimmer {
   0% {
-    background-position: -250% 0;
+    background-position: -200% 0;
   }
 
   100% {
-    background-position: 250% 0;
+    background-position: 200% 0;
   }
 }
 
-/* ==============================
+/* ==========================================
    DARK MODE
-============================== */
+========================================== */
 body.dark-mode {
   --shimmer-bg: hsl(209, 23%, 20%);
-  --shimmer-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  --shimmer-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-mode .shimmer-inner {
-  background: linear-gradient(110deg,
-      rgba(255, 255, 255, 0.05) 25%,
-      rgba(255, 255, 255, 0.15) 50%,
-      rgba(255, 255, 255, 0.05) 75%);
-  background-size: 300% 100%;
-  animation: shimmer-dark 1.7s ease-in-out infinite;
+  background: linear-gradient(100deg,
+      rgba(255, 255, 255, 0.02) 25%,
+      rgba(255, 255, 255, 0.06) 50%,
+      rgba(255, 255, 255, 0.02) 75%);
+  background-size: 200% 100%;
+  animation: shimmer-dark 2s ease-in-out infinite;
 }
 
 @keyframes shimmer-dark {
   0% {
-    background-position: -300% 0;
+    background-position: -200% 0;
   }
 
   100% {
-    background-position: 300% 0;
+    background-position: 200% 0;
   }
 }
 
-/* ==============================
-   RESPONSIVE
-============================== */
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
 @media (max-width: 1024px) {
   .shimmer-container {
     margin-top: 10%;
@@ -90,18 +84,18 @@ body.dark-mode .shimmer-inner {
 
 @media (max-width: 768px) {
   .shimmer-container {
-    margin-top: 17%;
+    margin-top: 15%;
   }
 }
 
 @media (max-width: 576px) {
   .shimmer-container {
-    margin-top: 27%;
+    margin-top: 25%;
   }
 }
 
 @media (max-width: 375px) {
   .shimmer-container {
-    margin-top: 36%;
+    margin-top: 35%;
   }
 }
