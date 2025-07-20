@@ -1,31 +1,29 @@
-import React, { createContext, useContext, useState, useLayoutEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [isDark, setIsDark] = useState(getInitialTheme);
+  const [isDark, setIsDark] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
-  function getInitialTheme() {
-    const saved = localStorage.getItem("theme");
-    if (saved) return saved === "dark";
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  }
-
-  function applyTheme(darkMode) {
-    const body = document.body;
-    body.classList.toggle("dark-mode", darkMode);
-    body.style.backgroundColor = darkMode
-      ? "hsl(207, 26%, 17%)"
-      : "hsl(0, 0%, 98%)";
-  }
-
-  function toggleTheme() {
+  const toggleTheme = () => {
     setIsDark((prev) => !prev);
-  }
+  };
 
-  // Apply theme  on load and whenever `isDark` changes
-  useLayoutEffect(() => {
-    applyTheme(isDark);
+  useEffect(() => {
+    const body = document.body;
+
+    // Apply dark or light mode styles
+    if (isDark) {
+      body.classList.add("dark-mode");
+      body.style.backgroundColor = "hsl(207, 26%, 17%)";
+    } else {
+      body.classList.remove("dark-mode");
+      body.style.backgroundColor = "hsl(0, 0%, 98%)";
+    }
+
+    // Save theme preference
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }, [isDark]);
 
@@ -37,9 +35,5 @@ export function ThemeProvider({ children }) {
 }
 
 export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
+  return useContext(ThemeContext);
 }
