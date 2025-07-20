@@ -1,0 +1,75 @@
+/* ==============================
+   REGION FILTER
+============================== */
+.region-filter {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    width: 220px;
+    padding: 0 14px;
+    border-radius: 12px;
+    background-color: var(--filter-bg, rgba(255, 255, 255, 0.5));
+    border: 1px solid var(--filter-border, rgba(0, 0, 0, 0.1));
+    backdrop-filter: blur(8px);
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.region-filter:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.region-filter:focus-within {
+    border-color: var(--filter-border-focus, rgba(0, 0, 0, 0.2));
+    box-shadow: 0 4px 16px rgba(41, 40, 40, 0.15);
+}
+
+/* ==============================
+     REGION SELECT
+  ============================== */
+.region-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    width: 100%;
+    background: transparent;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    color: var(--text-primary, #111);
+    outline: none;
+    padding: 8px 30px 8px 8px;
+    cursor: pointer;
+}
+
+.region-select option {
+    background-color: var(--filter-option-bg, #fff);
+    color: var(--text-primary, #111);
+}
+
+/* ==============================
+     CUSTOM DROPDOWN ARROW
+  ============================== */
+.custom-arrow {
+    position: absolute;
+    right: 14px;
+    pointer-events: none;
+    font-size: 13px;
+    color: var(--arrow-color, rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* ==============================
+     DARK MODE
+  ============================== */
+body.dark-mode {
+    --filter-bg: hsl(209, 23%, 22%);
+    --filter-border: rgba(255, 255, 255, 0.1);
+    --filter-border-focus: rgba(255, 255, 255, 0.3);
+    --filter-option-bg: hsl(209, 23%, 22%);
+    --text-primary: #fff;
+    --arrow-color: rgba(255, 255, 255, 0.8);
+}

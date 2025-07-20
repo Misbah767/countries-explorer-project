@@ -1,0 +1,37 @@
+/* ==============================
+   THEME TOGGLE BUTTON
+============================== */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--toggle-color, hsl(200, 15%, 8%));
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: clamp(12px, 2vw, 14px);
+  transition: color 0.3s ease;
+}
+
+.theme-toggle i {
+  font-size: clamp(14px, 2.5vw, 18px);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--toggle-hover-color, hsl(200, 15%, 25%));
+}
+
+.theme-toggle:hover i {
+  transform: rotate(20deg);
+}
+
+/* ==============================
+   DARK MODE
+============================== */
+body.dark-mode {
+  --toggle-color: hsl(0, 0%, 100%);
+  --toggle-hover-color: hsl(0, 0%, 80%);
+}

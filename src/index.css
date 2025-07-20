@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+/* ==============================
+   GLOBAL THEME VARIABLES
+============================== */
+:root {
+  /* Light Theme Colors */
+  --bg: hsl(0, 0%, 98%);
+  --header-bg: hsl(0, 0%, 100%);
+  --text-primary: hsl(200, 15%, 8%);
+  --accent: hsl(180, 58%, 47%);
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+  /* Dark Theme Overrides */
+  --bg: hsl(207, 26%, 17%);
+  --header-bg: hsl(209, 23%, 22%);
+  --text-primary: hsl(0, 0%, 100%);
+  --accent: hsl(180, 70%, 50%);
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Nunito Sans', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+html {
+  scrollbar-gutter: stable;
+}

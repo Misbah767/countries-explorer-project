@@ -1,0 +1,87 @@
+/* ==============================
+   HEADER STYLES
+============================== */
+.header-container {
+  width: 100%;
+  background-color: var(--header-bg, hsl(0, 0%, 100%));
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  padding: 16px 0;
+  min-height: 50px;
+  position: relative;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.container-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-title {
+  font-weight: 700;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--text-primary, hsl(200, 15%, 8%));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s ease;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+@media (max-width: 768px) {
+  .container-inner {
+    padding: 0 16px;
+  }
+
+  .header-title {
+    font-size: clamp(15px, 4vw, 18px);
+    margin-top: 7px;
+  }
+
+  .theme-toggle {
+    font-size: clamp(12px, 3vw, 14px);
+  }
+
+  .theme-toggle i {
+    font-size: clamp(13px, 3.5vw, 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .container-inner {
+    padding: 0 12px;
+  }
+
+  .header-title {
+    font-size: clamp(13px, 5vw, 16px);
+  }
+
+  .theme-toggle {
+    font-size: clamp(10px, 5vw, 12px);
+  }
+
+  .theme-toggle i {
+    font-size: clamp(11px, 5.5vw, 14px);
+  }
+}
+
+/* ==============================
+   DARK MODE
+============================== */
+body.dark-mode {
+  --header-bg: hsl(209, 23%, 22%);
+  --text-primary: hsl(0, 0%, 100%);
+  background-color: hsl(207, 26%, 17%);
+  color: var(--text-primary);
+}
+
+body.dark-mode .theme-toggle {
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}

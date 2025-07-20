@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+/* ==============================
+   LAYOUT: FILTERS & LIST
+============================== */
+.filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    gap: 24px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.country-list-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+/* ==============================
+   NO RESULT MESSAGE
+============================== */
+.no-result-message {
+    text-align: center;
+    margin: 40px auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+    color: hsl(0, 0%, 40%);
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 90%);
+    border-radius: 12px;
+    padding: 16px 24px;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideFadeIn 0.5s ease forwards;
+}
+
+.no-result-message strong {
+    color: hsl(180, 58%, 47%);
+}
+
+.no-result-message i {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: hsl(0, 70%, 50%);
+}
+
+.no-result-message:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.spellLine {
+    color: hsl(0, 0%, 40%);
+}
+
+/* ==============================
+   ANIMATIONS
+============================== */
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+@media (max-width: 768px) {
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 20px 16px;
+    }
+}
+
+/* ==============================
+   DARK MODE
+============================== */
+body.dark-mode {
+    --dark-bg: hsl(209, 23%, 22%);
+    --dark-border: hsla(0, 0%, 100%, 0.1);
+    --dark-text: #fff;
+    --dark-subtext: #ddd;
+    --accent-strong: hsl(180, 70%, 50%);
+}
+
+body.dark-mode .no-result-message {
+    background-color: var(--dark-bg);
+    border: 1px solid var(--dark-border);
+    color: var(--dark-text);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .no-result-message strong,
+body.dark-mode .no-result-message i,
+body.dark-mode .spellLine {
+    color: var(--accent-strong);
+}
+
+body.dark-mode .not-found-container {
+    color: var(--dark-text);
+}
+
+body.dark-mode .not-found-text {
+    color: var(--dark-subtext);
+}

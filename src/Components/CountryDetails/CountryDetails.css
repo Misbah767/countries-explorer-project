@@ -1,0 +1,144 @@
+.country-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 37px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: hsl(200, 15%, 8%);
+  margin-top: 2%;
+  overflow: hidden;
+  animation: fadeSlideIn 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.country-detail.exit {
+  animation: fadeSlideOut 0.5s ease forwards;
+}
+
+@keyframes fadeSlideOut {
+  to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+.detail-layout {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.flag-container {
+  flex: 1 1 400px;
+}
+
+.detail-flag {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detail-info {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+
+.detail-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.info-columns {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.column p {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.back-button,
+.border-country-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.back-button {
+  gap: 8px;
+  height: 3em;
+  width: 110px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.back-button:hover,
+.border-country-btn:hover {
+  background-color: #f1f1f1;
+}
+
+.border-country-btn {
+  padding: 0.5em 1em;
+  margin: 12px 12px 0 0;
+}
+
+@media (max-width: 768px) {
+  .detail-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .detail-flag {
+    margin-top: 20px;
+  }
+}
+
+body.dark-mode .detail-info {
+  color: #fff;
+}
+
+body.dark-mode .detail-flag {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .back-button,
+body.dark-mode .border-country-btn {
+  background-color: hsl(207, 26%, 17%);
+  color: #f0f0f0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .back-button:hover,
+body.dark-mode .border-country-btn:hover {
+  background-color: hsl(207, 26%, 20%);
+}
