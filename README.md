@@ -19,11 +19,11 @@ A modern, responsive React application that allows users to explore detailed cou
 
 | Home Page (Light) | Home Page (Dark) |
 |-------------------|------------------|
-| ![Home Light](./screenshots/home-light.png) | ![Home Dark](./screenshots/home-dark.png) |
+| ![Home Light](./Screenshots/home-light.png) | ![Home Dark](./Screenshots/home-dark.png) |
 
 | Country Detail (Light) | Country Detail (Dark) |
 |------------------------|-----------------------|
-| ![Detail Light](./screenshots/detail-light.png) | ![Detail Dark](./screenshots/detail-dark.png) |
+| ![Detail Light](./Screenshots/detail-light.png) | ![Detail Dark](./Screenshots/detail-dark.png) |
 
 ---
 
