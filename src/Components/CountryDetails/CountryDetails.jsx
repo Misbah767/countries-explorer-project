@@ -112,7 +112,7 @@ function CountryDetails() {
                   </button>
                 ))
               ) : (
-                <span>None</span>
+                <span className="p-2 mt-1">None</span>
               )}
             </div>
           </div>
