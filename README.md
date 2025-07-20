@@ -1,12 +1,45 @@
-# React + Vite
+# 🌍 Countries Explorer (REST Countries API)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive React application that allows users to explore detailed country data from around the world. Built with a clean architecture, React Hooks, Context API, React Router, and localStorage for a seamless dark/light mode experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔍 Search countries by name
+- 🌐 Filter by region
+- 💡 Light/Dark theme toggle (saved using localStorage)
+- 📄 View detailed country information with dynamic routing
+- 📱 Fully responsive design across all devices
+- ⚛️ Clean codebase using React best practices (Hooks + Context API + useReducer)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Screenshots
+
+| Home Page (Light) | Home Page (Dark) |
+|-------------------|------------------|
+| ![Home Light](./screenshots/home-light.png) | ![Home Dark](./screenshots/home-dark.png) |
+
+| Country Detail (Light) | Country Detail (Dark) |
+|------------------------|-----------------------|
+| ![Detail Light](./screenshots/detail-light.png) | ![Detail Dark](./screenshots/detail-dark.png) |
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** – Functional components, Hooks (`useState`, `useEffect`, `useReducer`)
+- **React Router DOM** – Dynamic routing between pages
+- **Context API** – Global state management
+- **REST Countries API** – Real-time country data
+- **CSS** – Custom styling with responsive layout
+- **localStorage** – Saves theme preference persistently
+
+---
+
+## 🚀 Live Demo
+
+👉 [View the Live Site on Vercel](https://countries-explorer-project-r6i6.vercel.app/)
+
+---
