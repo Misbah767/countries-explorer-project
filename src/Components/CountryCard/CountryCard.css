@@ -15,7 +15,7 @@
 ============================== */
 .country-card {
   flex: 1 1 290px;
-  max-width: 226px;
+  max-width: 230px;
   background-color: var(--card-bg, hsl(0, 0%, 100%));
   border-radius: 10px;
   box-shadow: var(--card-shadow,
@@ -23,7 +23,7 @@
       -8px -8px 15px rgba(255, 255, 255, 0.5));
   overflow: hidden;
   cursor: pointer;
-  margin: 13px;
+  margin: 20px;
   height: 280px;
   transition:
     transform 0.5s ease,

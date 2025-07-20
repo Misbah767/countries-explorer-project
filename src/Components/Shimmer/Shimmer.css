@@ -8,20 +8,24 @@
   gap: 32px;
   box-sizing: border-box;
   margin-top: 7%;
-  padding: 20px 0;
+  padding: 28px;
 }
 
 .shimmer-card {
   height: 270px;
+
+
   flex: 1 1 290px;
-  max-width: 226px;
+  max-width: 230px;
+
+  border-radius: 10px;
   background-color: var(--card-bg, hsl(0, 0%, 100%));
   border-radius: 10px;
   border-radius: 10px;
   background: var(--shimmer-bg, #e6e6e6);
   position: relative;
   overflow: hidden;
-  margin: 13px;
+  margin: 20px;
   box-shadow: var(--shimmer-shadow, 0 6px 20px rgba(0, 0, 0, 0.1));
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
